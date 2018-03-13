@@ -1,7 +1,7 @@
 FactoryBot.define do 
   
   factory :restaurant do
-    name "McDosalads"
+    name ""
     description "Best salads"
   end
 end
