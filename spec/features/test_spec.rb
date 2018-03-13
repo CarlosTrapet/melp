@@ -1,8 +1,8 @@
 require 'rails_helper.rb'
 
-feature 'test' do
-  scenario 'filter_gems_from_backtrace' do
+feature 'testing infrastructure' do
+  scenario 'Shows the home page' do
     visit '/'
-    expect(page).to have_content("Yay")
+    expect(page).to have_content("Welcome to Melp!")
   end
 end
