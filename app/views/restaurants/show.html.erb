@@ -19,19 +19,7 @@
 </p>
 <% end %>
 <h2>Add a review:</h2>
-<%= form_with(model: [ @restaurant, @restaurant.reviews.build ],
-local: true) do |form| %>
-  <p>
-    <%= form.label :reviewer %><br>
-    <%= form.text_field :reviewer %><br>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_field :body %><br>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+
+<%= render "reviews/form" %>
 
 <%= link_to 'Back', restaurants_path %>
