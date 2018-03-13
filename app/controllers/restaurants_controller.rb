@@ -1,7 +1,11 @@
 class RestaurantsController < ApplicationController
 
+  def index
+    @restaurants = Restaurant.all
+  end
+
   def show
-    @restaurant = Article.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def new
@@ -15,6 +19,6 @@ class RestaurantsController < ApplicationController
 
   private
     def restaurant_params
-      params.require(params.require(:restaurant).permit(:name, :description))
+      params.require(:restaurant).permit(:name, :description)
     end
 end
