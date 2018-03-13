@@ -1,5 +1,9 @@
 class RestaurantsController < ApplicationController
 
+  def show
+    @restaurant = Article.find(params[:id])
+  end
+
   def new
   end
 
