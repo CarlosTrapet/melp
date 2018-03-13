@@ -1,5 +1,5 @@
 <%= form_with(model: [@restaurant, @restaurant.reviews.build ],
-  local: true do |form| %>
+  local: true) do |form| %>
 <% if @restaurant.errors.any? %>
   <div id="error_explanation">
     <h2>
