@@ -7,3 +7,19 @@
   <strong>Description</strong>
   <%= @restaurant.description %>
 </p>
+<h2>Reviews</h2>
+<% @restaurant.reviews.each do |review| %>
+<p>
+  <strong>Reviewer:</strong>
+  <%= review.reviewer %>
+</p>
+<p>
+  <strong>Review:</strong>
+  <%= review.body %>
+</p>
+<% end %>
+<h2>Add a review:</h2>
+
+<%= render "reviews/form" %>
+
+<%= link_to 'Back', restaurants_path %>
