@@ -25,6 +25,9 @@
   <strong>Review:</strong>
   <%= review.body %>
 </p>
+<p>
+  <%= link_to 'Delete Review', [review.restaurant, review], method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
 <% end %>
 <h2>Add a review:</h2>
 
