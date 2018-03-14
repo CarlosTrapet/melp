@@ -1,0 +1,15 @@
+<%= form_with model: @restaurant do |form| %>
+<p>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %><br>
+</p>
+
+<p>
+  <%= form.label :description %><br>
+  <%= form.text_field :description %><br>
+</p>
+
+<p>
+  <%= form.submit %>
+</p>
+<% end %>

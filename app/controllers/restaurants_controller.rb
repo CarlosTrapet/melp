@@ -4,17 +4,27 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
-  def show
-    @restaurant = Restaurant.find(params[:id])
+  def create
+    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.save
+    redirect_to @restaurant
   end
 
   def new
   end
 
-  def create
-    @restaurant = Restaurant.new(restaurant_params)
-    @restaurant.save
-    redirect_to @restaurant
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update(restaurant_params) ? redirect_to(@restaurant) : render("edit")
+
   end
 
   private
