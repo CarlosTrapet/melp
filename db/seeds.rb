@@ -5,5 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Restaurant.create([{ name: 'Mcd' }, { description: 'burgers' } ])
-Restaurant.create([{ name: 'deedes' }, { description: 'grilled stuff' } ])
+mc = Restaurant.create(name: 'Mcd', description: 'burgers')
+deed = Restaurant.create(name: 'deedes', description: 'grilled stuff')
