@@ -23,13 +23,9 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find(params[:id])
-
-    Restaurant.update(restaurant_params)? redirect_to(@restaurant) : render("edit")
+    @restaurant.update(restaurant_params) ? redirect_to(@restaurant) : render("edit")
 
   end
-
-
-
 
   private
     def restaurant_params
