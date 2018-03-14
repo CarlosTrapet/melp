@@ -7,11 +7,19 @@
   <strong>Description</strong>
   <%= @restaurant.description %>
 </p>
+<p>
+  <strong>Average score:</strong>
+  <%= @restaurant.reviews.average(:score).to_i %>
+</p>
 <h2>Reviews</h2>
 <% @restaurant.reviews.each do |review| %>
 <p>
   <strong>Reviewer:</strong>
   <%= review.reviewer %>
+</p>
+<p>
+  <strong>Score:</strong>
+  <%= review.score %>
 </p>
 <p>
   <strong>Review:</strong>

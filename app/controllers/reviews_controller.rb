@@ -6,12 +6,12 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      render '/restaurants'
+      redirect_to restaurant_path(@restaurant)
     end
   end
 
   private
   def review_params
-    params.require(:review).permit(:reviewer, :body)
+    params.require(:review).permit(:reviewer, :score, :body)
   end
 end
