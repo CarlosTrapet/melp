@@ -12,6 +12,10 @@
       <td><%= restaurant.description %></td>
       <td><%= link_to "Show", restaurant_path(restaurant) %></td>
       <td><%= link_to "Edit", edit_restaurant_path(restaurant), id: "#{restaurant.id}" %></td>
+      <td><%= link_to "Delete", restaurant_path(restaurant),
+              method: :delete,
+              data: { confirm: "Are you sure?" },
+              id: "delete-#{restaurant.id}" %></td>
     </tr>
   <% end %>
 </table>
