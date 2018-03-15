@@ -13,18 +13,23 @@
 </p>
 <h2>Reviews</h2>
 <% @restaurant.reviews.each do |review| %>
-<p>
-  <strong>Reviewer:</strong>
-  <%= review.reviewer %>
-</p>
-<p>
-  <strong>Score:</strong>
-  <%= review.score %>
-</p>
-<p>
-  <strong>Review:</strong>
-  <%= review.body %>
-</p>
+  <% if review.valid? %>
+    <p>
+      <strong>Reviewer:</strong>
+      <%= review.reviewer %>
+    </p>
+    <p>
+      <strong>Score:</strong>
+      <%= review.score %>
+    </p>
+    <p>
+      <strong>Review:</strong>
+      <%= review.body %>
+    </p>
+    <p>
+      <%= link_to 'Delete Review', [review.restaurant, review], method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  <% end %>
 <% end %>
 <h2>Add a review:</h2>
 
