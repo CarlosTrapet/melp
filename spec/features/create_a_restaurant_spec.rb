@@ -2,7 +2,8 @@ require 'rails_helper.rb'
 
 feature 'Create a restaurant' do
   scenario 'Displays restaurant created' do
-    visit '/restaurants/new'
+    visit '/restaurants'
+    click_link 'Add Restaurant'
     fill_in :"restaurant[name]", with: "The Fat Duck"
     fill_in :"restaurant[description]", with: "Avante garde snacks"
     click_button "Save Restaurant"
