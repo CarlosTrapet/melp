@@ -15,7 +15,7 @@
       <td><%= link_to "Delete", restaurant_path(restaurant),
               method: :delete,
               data: { confirm: "Are you sure?" },
-              id: "delete-#{restaurant.id}" %></td>
+              id: "delete-#{restaurant.name}" %></td>
     </tr>
   <% end %>
 </table>
