@@ -7,6 +7,6 @@ feature 'delete a restaurant' do
     visit '/restaurants'
     click_link 'delete-The Fat Duck'
     expect(page).to have_current_path '/restaurants'
-    # expect(page).not_to have_content ''
+    expect(page).not_to have_content 'The Fat Duck'
   end
 end
