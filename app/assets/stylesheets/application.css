@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+ html {
+   background: url(boardwalk.png) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+ h1 {
+   display: inline;
+   margin-left: 64px;
+   font-size: 69px;
+   font-family: helvetica;
+   font-weight: 75;
+   color: #5B0205;
+ }
+ .logo {
+   position:fixed;
+   width: 69px;
+ }
+ a {
+   text-decoration: none;
+ }
