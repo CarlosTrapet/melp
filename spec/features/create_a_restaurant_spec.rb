@@ -11,4 +11,14 @@ feature 'Create a restaurant' do
     expect(page).to have_content "The Fat Duck"
     expect(page).to have_content "Avante garde snacks"
   end
+
+  scenario "Displays an error message when new restaurant is invalid" do
+    visit '/restaurants'
+    click_link 'Add Restaurant'
+    fill_in :"restaurant[name]", with: "The Fat Duck"
+    fill_in :"restaurant[description]", with: ""
+    click_button "Save Restaurant"
+    expect(page).not_to have_content("The Fat Duck")
+    expect(page).to have_content("Description can't be blank")
+  end
 end
