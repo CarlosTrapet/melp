@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+
+  before_action :authenticate_user! 
+ 
   
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
