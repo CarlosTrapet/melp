@@ -1,6 +1,26 @@
-<h1>Listing Restaurants</h1>
+<h1>Melp</h1>
 
-<table>
+<div class="main-container">
+  <% @restaurants.each do |restaurant| %>
+    <div class="restaurant-container">
+      <div class="name-container">
+        <%= restaurant.name %>
+      </div>
+      <a href="<%= "#{restaurant_path(restaurant)}"%>"><div class="image-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Myresluger2.jpg" alt="" class="restaurant-image">
+      </div></a>
+      <div class="stars-container">
+        <%= restaurant.reviews.average(:score).to_i %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+<!-- <table>
   <tr>
     <th>Restaurant Name</th>
     <th>Description</th>
@@ -18,6 +38,11 @@
               id: "delete-#{restaurant.name}" %></td>
     </tr>
   <% end %>
-</table>
+</table> -->
+
+<div class="this">
+  this is a test
+
+</div>
 
 <%= link_to "Add Restaurant", new_restaurant_path %>
