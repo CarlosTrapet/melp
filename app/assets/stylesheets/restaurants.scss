@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  font-family: 'Alegreya', serif;
+  background-color: hotpink;
+}
+
+h1 {
+  text-align: center;
+}
+
 .main-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -9,8 +18,10 @@
 }
 
 .restaurant-container {
+  border: 1px solid black;
+  border-radius: 10px;
   padding: 10px;
-  margin: 10px;
+  margin: 40px;
 }
 
 .restaurant-image {
@@ -26,4 +37,9 @@
 
 .stars-container {
   text-align: center;
+}
+
+.pentagram {
+  height: 20px;
+  width: 20px;
 }
