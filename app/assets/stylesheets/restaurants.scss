@@ -1,3 +1,29 @@
 // Place all the styles related to the Restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+}
+
+.restaurant-container {
+  padding: 10px;
+  margin: 10px;
+}
+
+.restaurant-image {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.name-container {
+  text-align: center;
+}
+
+.stars-container {
+  text-align: center;
+}
