@@ -10,39 +10,12 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Myresluger2.jpg" alt="" class="restaurant-image">
       </div></a>
       <div class="stars-container">
-        <%= restaurant.reviews.average(:score).to_i %>
+        <% restaurant.reviews.average(:score).to_i.times do %>
+          <img src="https://t2.rbxcdn.com/b038a7e9ce0b6d90f4510233d577ae08" class="pentagram">
+        <% end %>
       </div>
     </div>
   <% end %>
-</div>
-
-
-
-
-
-<!-- <table>
-  <tr>
-    <th>Restaurant Name</th>
-    <th>Description</th>
-  </tr>
-
-  <% @restaurants.each do |restaurant| %>
-    <tr>
-      <td><%= restaurant.name %></td>
-      <td><%= restaurant.description %></td>
-      <td><%= link_to "Show", restaurant_path(restaurant) %></td>
-      <td><%= link_to "Edit", edit_restaurant_path(restaurant), id: "edit-#{restaurant.name}" %></td>
-      <td><%= link_to "Delete", restaurant_path(restaurant),
-              method: :delete,
-              data: { confirm: "Are you sure?" },
-              id: "delete-#{restaurant.name}" %></td>
-    </tr>
-  <% end %>
-</table> -->
-
-<div class="this">
-  this is a test
-
 </div>
 
 <%= link_to "Add Restaurant", new_restaurant_path %>
