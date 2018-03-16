@@ -1,4 +1,6 @@
 <h1>Melp</h1>
+<%= link_to "Add Restaurant", new_restaurant_path %>
+<%= link_to "Sign out", destroy_user_session %>
 
 <div class="main-container">
   <% @restaurants.each do |restaurant| %>
@@ -17,5 +19,3 @@
     </div>
   <% end %>
 </div>
-
-<%= link_to "Add Restaurant", new_restaurant_path %>
