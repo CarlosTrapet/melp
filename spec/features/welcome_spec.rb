@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-feature 'testing infrastructure' do
+feature 'Welcome page' do
   scenario 'Shows the home page' do
     visit '/'
     expect(page).to have_content("Review a restaurant.")
