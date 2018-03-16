@@ -1,7 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :restaurant
-
-  validates :reviewer, presence: true
+  belongs_to :user
 
   validates :score, presence: true
   validates_inclusion_of :score, in: 1..5

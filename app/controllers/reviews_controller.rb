@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
 
-  before_action :authenticate_user! 
- 
-  
+  before_action :authenticate_user!
+
+
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
     redirect_back fallback_location: { action: "show", id: @restaurant.id }
@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
 
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
+    p review_params
     @review = @restaurant.reviews.create(review_params)
 
     if @review.save
@@ -30,6 +31,6 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:reviewer, :score, :body)
+    params.require(:review).permit(:score, :body)
   end
 end
