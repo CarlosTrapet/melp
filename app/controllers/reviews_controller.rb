@@ -6,11 +6,11 @@ class ReviewsController < ApplicationController
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
     redirect_back fallback_location: { action: "show", id: @restaurant.id }
-    p "CURRENT USER IS "
-    p current_user
   end
 
   def create
+    @params = review_params
+    @params[:user_id] = current_user.id
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = @restaurant.reviews.create(@params)
 
