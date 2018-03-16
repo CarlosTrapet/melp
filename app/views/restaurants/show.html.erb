@@ -16,7 +16,7 @@
   <% if review.valid? %>
     <p>
       <strong>Reviewer:</strong>
-      <%= review.reviewer %>
+      <%= review.user.email %>
     </p>
     <p>
       <strong>Score:</strong>

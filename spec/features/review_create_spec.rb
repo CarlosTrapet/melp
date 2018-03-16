@@ -15,4 +15,13 @@ feature "Create a review" do
     expect(page).to have_current_path(/restaurants\/[0-9]+/)
     expect(page).not_to have_content('Test Reviewer')
   end
+
+  scenario "Adding review displays user's email" do
+    sign_up
+    create_new_restaurant
+    create_new_review
+    expect(page).to have_current_path(/restaurants\/[0-9]+/)
+    expect(page).to have_content('monroe@example.com')
+  end
+
 end

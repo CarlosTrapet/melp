@@ -16,10 +16,6 @@
 
 <%= form_with(model: [@restaurant, @restaurant.reviews.build ], local: true) do |form| %>
 <p>
-  <%= form.label :reviewer %>
-  <%= form.text_field :reviewer %>
-</p>
-<p>
   <%= form.label :score %>
   <%= form.text_field :score %>
 </p>

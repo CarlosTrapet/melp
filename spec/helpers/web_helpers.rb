@@ -13,14 +13,12 @@ def create_invalid_restaurant
 end
 
 def create_new_review
-  fill_in 'review[reviewer]', with: 'Test Reviewer'
   fill_in 'review[score]', with: 5
   fill_in 'review[body]', with: 'Test body'
   click_on 'Create Review'
 end
 
 def create_invalid_review
-  fill_in 'review[reviewer]', with: 'Test Reviewer'
   fill_in 'review[score]', with: 5
   fill_in 'review[body]', with: ''
   click_on 'Create Review'
