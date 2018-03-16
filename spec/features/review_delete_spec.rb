@@ -1,5 +1,4 @@
 require "rails_helper.rb"
-require_relative "../web_helpers.rb"
 
 feature "Deleting reviews" do
   scenario "user can delete review" do

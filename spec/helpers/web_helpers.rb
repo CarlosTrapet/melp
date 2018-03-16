@@ -5,6 +5,13 @@ def create_new_restaurant
   click_button "Save Restaurant"
 end
 
+def create_invalid_restaurant
+  visit '/restaurants/new'
+  fill_in :"restaurant[name]", with: "The Fat Duck"
+  fill_in :"restaurant[description]", with: ""
+  click_button "Save Restaurant"
+end
+
 def create_new_review
   fill_in 'review[reviewer]', with: 'Test Reviewer'
   fill_in 'review[score]', with: 5
