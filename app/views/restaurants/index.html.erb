@@ -1,6 +1,7 @@
 <h1>Melp</h1>
 <%= link_to "Add Restaurant", new_restaurant_path %>
-<%= link_to "Sign out", destroy_user_session %>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+
 
 <div class="main-container">
   <% @restaurants.each do |restaurant| %>
