@@ -1,6 +1,7 @@
 require "rails_helper.rb"
 feature "Input is validated" do
   scenario "when user doesn't enter input " do
+    sign_up
     visit '/restaurants/new'
     fill_in :"restaurant[name]", with: "The Fat Duck"
     fill_in :"restaurant[description]", with: "Avante garde snacks"

@@ -2,7 +2,7 @@ require 'rails_helper.rb'
 
 feature 'Create a restaurant' do
   scenario 'Displays restaurant created' do
-    visit '/restaurants'
+    sign_up
     click_link 'Add Restaurant'
     fill_in :"restaurant[name]", with: "The Fat Duck"
     fill_in :"restaurant[description]", with: "Avante garde snacks"
@@ -13,6 +13,7 @@ feature 'Create a restaurant' do
   end
 
   scenario "Displays an error message when new restaurant is invalid" do
+    sign_up
     visit '/restaurants'
     click_link 'Add Restaurant'
     fill_in :"restaurant[name]", with: "The Fat Duck"

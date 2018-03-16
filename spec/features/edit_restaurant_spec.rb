@@ -1,12 +1,12 @@
 require 'rails_helper.rb'
 feature 'Restaurant details can be edited' do
   scenario 'lets user edit the restaurant' do
+    sign_up
     visit '/restaurants/new'
     fill_in :"restaurant[name]", with: "RestaurantEdited"
     fill_in :"restaurant[description]", with: "Description to be edited"
     click_button "Save Restaurant"
-    click_link "Back"
-    click_link "edit-RestaurantEdited"
+    click_link "Edit"
     fill_in :"restaurant[name]", with: 'Buhhha'
     fill_in :"restaurant[description]", with: 'Amazing'
     click_button 'Update Restaurant'
