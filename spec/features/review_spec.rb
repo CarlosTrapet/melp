@@ -3,6 +3,7 @@ require_relative '../web_helpers.rb'
 
 feature "Reviews" do
   scenario "user can add restaurant reviews" do
+    sign_up
     create_new_restaurant
     fill_in 'review[reviewer]', with: 'Luke'
     fill_in 'review[score]', with: 2
