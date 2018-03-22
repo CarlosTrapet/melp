@@ -1,17 +1,17 @@
 <% if @restaurant.reviews.last != nil %>
-<% if @restaurant.reviews.last.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@restaurant.reviews.last.errors.count, "error") %>
-      prohibited this review from being saved:
-    </h2>
-    <ul>
-      <% @restaurant.reviews.last.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+  <% if @restaurant.reviews.last.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@restaurant.reviews.last.errors.count, "error") %>
+        prohibited this review from being saved:
+      </h2>
+      <ul>
+        <% @restaurant.reviews.last.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 <% end %>
 
 <%= form_with(model: [@restaurant, @restaurant.reviews.build ], local: true) do |form| %>

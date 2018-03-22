@@ -23,5 +23,4 @@ feature "Create a review" do
     expect(page).to have_current_path(/restaurants\/[0-9]+/)
     expect(page).to have_content('monroe@example.com')
   end
-
 end
